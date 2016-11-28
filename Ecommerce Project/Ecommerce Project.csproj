@@ -199,6 +199,10 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="App_Data\aspnet-Ecommerce Project-20161119011615.mdf" />
+    <Content Include="App_Data\aspnet-Ecommerce Project-20161119011615_log.ldf">
+      <DependentUpon>aspnet-Ecommerce Project-20161119011615.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\Orders.mdf" />
     <Content Include="App_Data\Orders_log.ldf">
       <DependentUpon>Orders.mdf</DependentUpon>
