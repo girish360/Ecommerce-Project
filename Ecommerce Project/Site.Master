@@ -100,8 +100,10 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Online Store</p>
+            <footer class="footer">
+                <div class="container">
+                    <p class="text-muted">&copy; <%: DateTime.Now.Year %> - PBSJ Armory</p>
+                </div>
             </footer>
         </div>
     </form>
