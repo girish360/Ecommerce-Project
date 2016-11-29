@@ -59,7 +59,7 @@ input[type="select"] {
 @media screen and (max-width: 786px) {
 
     .prod-caption {
-        height: 80px;
+        height: 40px;
     }
 }
 
@@ -74,6 +74,7 @@ input[type="select"] {
     left: 0;
 }
 
+/*Move the price to the right of the div*/
 .price {
     float:right;
 }
