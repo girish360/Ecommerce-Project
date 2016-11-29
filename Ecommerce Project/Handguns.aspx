@@ -35,8 +35,6 @@
                             <a href="#" class="btn btn-primary" role="button">Add to Cart</a>
                         </div>
                     </div>
-
-                    </a>
                 </div>
             </ItemTemplate>
             <FooterTemplate>
