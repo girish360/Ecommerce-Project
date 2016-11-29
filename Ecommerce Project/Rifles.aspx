@@ -9,7 +9,7 @@
             </HeaderTemplate>
 
             <ItemTemplate>
-                <div class="col-md-3" style="padding-left: 0px; padding-right: 0px;">
+                <div class="col-md-3 prod" style="padding-left: 0px; padding-right: 0px;">
                     <div class="thumbnail">
                         <a href="">
                             <img src='<%# DataBinder.Eval(Container.DataItem, "ProductImage") %>.jpg' alt="" style="width: 100%; border: 1px solid gray;" />
