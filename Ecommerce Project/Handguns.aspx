@@ -24,11 +24,6 @@
                                         Text='<%# Eval("ProductName") %>' />
                                     <asp:Label runat="server" ID="Label3"
                                         Text='<%# Eval("ProductType") %>' />
-                                    <p>
-                                        testasdfjlkasdf;lkjasd;lkfja;lksdfja;lksdfj;lkasdf;lkjasdflkjasdlkfj;ajlksdf;lkasjdf;lkajsdf
-                                        asd;lfjkasldfja;lksdfja;lksdfj;lkasdjflasdfjl;asdfj;lasdjflaksdfj;lasd;flkjasd;lfj
-                                        as;ldfja;sldkfja;lksdfj;lkasdjf;laksdjfj;lasdfjkaslkjfaslkdfja;lksjf;alksdfja;lksfjalksdf
-                                    </p>
                                 </div>
                             </div>
                         </a>
