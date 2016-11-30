@@ -242,3 +242,9 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/Ecommerce Project/images/Rifles/vs2015.3.exe
+/Ecommerce Project/App_Data/Users_log.ldf
+/Ecommerce Project/App_Data/Users.mdf
+/Ecommerce Project/App_Data/Orders_log.ldf
+/Ecommerce Project/App_Data/Orders.mdf
+/CreateUsersTable.sql
