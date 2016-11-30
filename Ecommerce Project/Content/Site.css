@@ -32,6 +32,7 @@ input[type="select"] {
     .jumbotron {
         margin-top: 20px;
     }
+
     .body-content {
         padding: 0;
     }
@@ -40,3 +41,40 @@ input[type="select"] {
 /*Poulina and Jon you can add all your custom CSS below here
   Make sure to comment what each selector does as well
 */
+
+@media screen and (min-width: 992px) {
+    .thumbnail {
+        min-height: 380px;
+    }
+
+    .prod {
+        min-height: 450px;
+    }
+
+    .prod-caption {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 786px) {
+
+    .prod-caption {
+        height: 40px;
+    }
+}
+
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
+}
+
+.float-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/*Move the price to the right of the div*/
+.price {
+    float:right;
+}
