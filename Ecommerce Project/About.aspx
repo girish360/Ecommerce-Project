@@ -16,8 +16,8 @@
         <img class="img-responsive" src="//cdn1.lawrensen.com/pbsj/img/braden.jpg" alt="Braden">
         <h3>Braden Kelly</h3>
         <p>
-            About fillerfillerfillerfillerfillerfillerfiller
-            fillerfillerfillerfillerfillerfillerfillerfiller
+            I’m Braden Kelly. I hail from Sioux City, Iowa, and currently reside in Orange City, Iowa. 
+            I enjoy all things technology, and spending time with friends and family.
         </p>
     </div>
     <div class="col-sm-6 col-md-3">
