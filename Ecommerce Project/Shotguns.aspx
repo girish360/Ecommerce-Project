@@ -32,7 +32,8 @@
                                 <asp:Label runat="server" ID="Label4"
                                     Text='<%# Eval("ProductPrice") %>' />
                             </strong>
-                            <a href="#" class="btn btn-primary" role="button">Add to Cart</a>
+                            <%--<a href="#" class="btn btn-primary" role="button">Add to Cart</a>--%>
+                            <a href="AddToCart.aspx?ProductID=<%# Eval("ProductId") %>" class="btn btn-primary" role="button" id='<%# Eval("ProductId") %>'>Add to Cart</a>
                         </div>
                     </div>
                 </div>
@@ -45,7 +46,7 @@
         <asp:SqlDataSource
             ConnectionString="<%$ ConnectionStrings:DefaultConnection %>"
             ID="SqlDataSource1" runat="server"
-            SelectCommand="SELECT [ProductName], [ProductPrice], [ProductType],
+            SelectCommand="SELECT [ProductID], [ProductName], [ProductPrice], [ProductType],
               [ProductImage] FROM [Products] WHERE ProductType = 'Shotgun'"></asp:SqlDataSource>
     </div>
 </asp:Content>
