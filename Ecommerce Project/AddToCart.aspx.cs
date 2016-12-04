@@ -35,6 +35,7 @@ namespace Ecommerce_Project
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
                 }
+                Response.Redirect("UserOrders");
             }
             else
             {

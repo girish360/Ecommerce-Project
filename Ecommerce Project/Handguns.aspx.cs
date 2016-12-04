@@ -14,18 +14,5 @@ namespace Ecommerce_Project
         {
 
         }
-
-        //public void getProdID(int i)
-        //{
-        //    //Debug.WriteLine("Debug: " + i);
-        //    Response.Redirect("~/AddToCart.aspx?ProductID=" + i);
-        //}
-
-        public void getProdID(object sender, EventArgs e)
-        {
-            //Debug.WriteLine("Debug: " + i);
-
-            Response.Redirect("~/AddToCart.aspx?ProductID=1");
-        }
     }
 }
