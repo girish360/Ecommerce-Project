@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,6 +13,19 @@ namespace Ecommerce_Project
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        //public void getProdID(int i)
+        //{
+        //    //Debug.WriteLine("Debug: " + i);
+        //    Response.Redirect("~/AddToCart.aspx?ProductID=" + i);
+        //}
+
+        public void getProdID(object sender, EventArgs e)
+        {
+            //Debug.WriteLine("Debug: " + i);
+
+            Response.Redirect("~/AddToCart.aspx?ProductID=1");
         }
     }
 }

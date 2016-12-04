@@ -248,3 +248,5 @@ ModelManifest.xml
 /Ecommerce Project/App_Data/Orders_log.ldf
 /Ecommerce Project/App_Data/Orders.mdf
 /CreateUsersTable.sql
+/Ecommerce Project/Models
+/Ecommerce Project/Logic
