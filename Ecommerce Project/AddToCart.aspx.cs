@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Diagnostics;
-using Ecommerce_Project.Logic;
+//using Ecommerce_Project.Logic;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;

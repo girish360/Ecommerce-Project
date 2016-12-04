@@ -200,6 +200,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AddToCart.aspx" />
+    <Content Include="AdminOrders.aspx" />
     <Content Include="App_Data\aspnet-Ecommerce Project-20161119011615.mdf" />
     <Content Include="App_Data\aspnet-Ecommerce Project-20161119011615_log.ldf">
       <DependentUpon>aspnet-Ecommerce Project-20161119011615.mdf</DependentUpon>
@@ -395,6 +396,13 @@
     <Compile Include="AddToCart.aspx.designer.cs">
       <DependentUpon>AddToCart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminOrders.aspx.cs">
+      <DependentUpon>AdminOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminOrders.aspx.designer.cs">
+      <DependentUpon>AdminOrders.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -430,12 +438,7 @@
     <Compile Include="Handguns.aspx.designer.cs">
       <DependentUpon>Handguns.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Logic\ShoppingCartActions.cs" />
-    <Compile Include="Models\ShoppingCart.cs" />
-    <Compile Include="Models\CartItem.cs" />
-    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ProductContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rifles.aspx.cs">
       <DependentUpon>Rifles.aspx</DependentUpon>
