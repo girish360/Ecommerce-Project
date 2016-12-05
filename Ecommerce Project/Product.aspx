@@ -5,35 +5,42 @@
         DataSourceID="SqlDataSource1">
         <ItemTemplate>
             <div class="container">
-
                 <div class="row">
-
                     <div class="col-md-12">
-                        <div class="col-md-3">
-                            <asp:Label runat="server" ID="Label6"
-                                Text='<%#"<strong>Shipped: </strong>" + Eval("ProductName") %>' />
-                        </div>
-
-                        <div class="thumbnail">
-                            <img class="img-responsive" src="http://placehold.it/800x300" alt="">
-                            <div class="caption-full">
-                                <h4 class="pull-right">$Price</h4>
-                                <h4><a href="#">Product Name</a>
-                                </h4>
-                                <p>Product Description</p>
-                            </div>
-                        </div>
+                        <img class="img-responsive" src="<%# Eval("ProductImage") %>.jpg" style="max-height: 500px;" alt="">
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-10">
+                        <h4><a href="#"><%#Eval("ProductName")%></a>
+                        </h4>
+                        <p>Product Description</p>
+                    </div>
+                    <div class="col-md-2">
+                        <h4 class="pull-right">$<%#Eval("ProductPrice")%></h4>
+                    </div>
+                </div>
+
+                <div class="row">
+        <div class="col-md-12">
+            <p><%#Eval("ProductDesc") %></p>
+            <p>
+                <a class="btn btn-default" href="">Buy Now &raquo;</a>
+            </p>
+        </div>
+
+    </div>
+
+
         </ItemTemplate>
         <EmptyDataTemplate>
-            There is nothing to see here.
+            <p>You must select a product.</p>
         </EmptyDataTemplate>
     </asp:FormView>
     <asp:SqlDataSource
         ConnectionString="<%$ ConnectionStrings:DefaultConnection %>"
         ID="SqlDataSource1" runat="server"
-        SelectCommand="SELECT [Products].[ProductName], [Products].[ProductType], [Products].[ProductPrice], [Products].[ProductImage], [Products].[ProductPrice]
+        SelectCommand="SELECT [Products].[ProductName], [Products].[ProductType], [Products].[ProductPrice], [Products].[ProductImage], [Products].[ProductPrice], [Products].[ProductDesc]
 FROM [Products]
 WHERE [Products].[ProductID] = @productID">
         <SelectParameters>
