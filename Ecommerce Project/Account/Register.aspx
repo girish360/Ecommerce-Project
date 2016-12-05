@@ -51,6 +51,14 @@
             </div>
         </div>
         <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="City" CssClass="col-md-2 control-label">City</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="City" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="City"
+                    CssClass="text-danger" ErrorMessage="The city field is required." />
+            </div>
+        </div>
+        <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="State" CssClass="col-md-2 control-label">State</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="State" CssClass="form-control" />

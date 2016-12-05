@@ -10,17 +10,10 @@ namespace Ecommerce_Project
 {
     public partial class UserOrders : System.Web.UI.Page
     {
-        protected string userId;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             //userId = Page.User.Identity.GetUserId();
             SqlDataSource1.SelectParameters["userID"].DefaultValue = User.Identity.GetUserId();
-        }
-
-        protected string getUserId()
-        {
-            return userId;
         }
     }
 }

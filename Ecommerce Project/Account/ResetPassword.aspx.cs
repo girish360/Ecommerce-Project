@@ -4,7 +4,7 @@ using System.Web;
 using System.Web.UI;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
-
+using Ecommerce_Project.Models;
 
 namespace Ecommerce_Project.Account
 {

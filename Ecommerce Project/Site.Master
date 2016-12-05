@@ -95,6 +95,18 @@
                                 </li>
                             </ul>
                         </LoggedInTemplate>
+                        <RoleGroups>
+                            <asp:RoleGroup Roles="Admin">
+                                <ContentTemplate>
+                                    <asp:LoginName ID="LoginName2" runat="Server"></asp:LoginName>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li>
+                                            <a runat="server" href="AdminOrders">All Orders</a>
+                                        </li>
+                                    </ul>
+                                </ContentTemplate>
+                            </asp:RoleGroup>
+                        </RoleGroups>
                     </asp:LoginView>
                 </div>
             </div>
