@@ -16,7 +16,7 @@
             <ItemTemplate>
                 <div class="col-md-3 prod" style="padding-left: 0px; padding-right: 0px;">
                     <div class="thumbnail">
-                        <a href="">
+                        <a href="Product.aspx?ProductID=<%# Eval("ProductId") %>" id='<%# Eval("ProductId") %>1'>
                             <img src='<%# DataBinder.Eval(Container.DataItem, "ProductImage") %>.jpg' alt="" style="width: 100%; border: 1px solid gray;" />
                             <div class="caption">
                                 <div class="prod-caption ellipsis">
@@ -29,8 +29,8 @@
                         </a>
                         <div>
                             <strong class="price">
-                                <asp:Label runat="server" ID="Label4"
-                                    Text='<%# Eval("ProductPrice") %>' />
+                                <asp:Label runat="server" ID="Label4" class="padd1 h3"
+                                    Text='<%# Eval("ProductPrice") %> ' />
                             </strong>
                             <%--<asp:Button runat="server" class="btn btn-primary" role="button" Text="Add to Cart" ID='<%# Eval("ProductId") %>'></asp:Button>--%>
                             <a href="AddToCart.aspx?ProductID=<%# Eval("ProductId") %>" class="btn btn-primary" role="button" id='<%# Eval("ProductId") %>'>Add to Cart</a>

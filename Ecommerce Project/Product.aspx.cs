@@ -14,19 +14,11 @@ namespace Ecommerce_Project
 {
     public partial class Product : System.Web.UI.Page
     {
-        public string productDescription()
-        {
-            string htmlData = "";
-
-            return htmlData;
-        }
-
-
-        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
         protected void Page_Load(object sender, EventArgs e)
         {
-            string prodId = Request.QueryString["ProductID"];
-
+            //userId = Page.User.Identity.GetUserId();
+            SqlDataSource1.SelectParameters["ProductID"].DefaultValue = Request.QueryString["ProductID"];
         }
+
     }
 }

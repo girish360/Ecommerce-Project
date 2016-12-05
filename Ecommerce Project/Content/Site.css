@@ -77,6 +77,7 @@ input[type="select"] {
 /*Move the price to the right of the div*/
 .price {
     float:right;
+    padding-right: 4px;
 }
 
 /*Product details*/
@@ -106,4 +107,8 @@ body {
 
 footer {
     margin: 50px 0;
+}
+
+.padd1 {
+    padding-right: 5px;
 }
