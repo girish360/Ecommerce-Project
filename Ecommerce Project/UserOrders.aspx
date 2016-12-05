@@ -6,42 +6,34 @@
             DataSourceID="SqlDataSource1">
             <HeaderTemplate>
                 <table class="table">
-                    <tr>
-                        <th>Order ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Product Name</th>
-                        <th>Price</th>
-                        <th>Order Fulfilled</th>
-                    </tr>
+                    <h3>Your Orders</h3>
             </HeaderTemplate>
 
             <ItemTemplate>
                 <tr>
-                    <td>
+                    <hr />
+                    <div class="col-md-2">
                         <asp:Label runat="server" ID="Label1"
-                            Text='<%# Eval("OrderID") %>' />
-                    </td>
-                    <td>
+                            Text='<%#"Order #" + Eval("OrderID") %>' />
+                    </div>
+                    <div class="col-md-2">
                         <asp:Label runat="server" ID="Label2"
-                            Text='<%# Eval("FirstName") %>' />
-                    </td>
-                    <td>
-                        <asp:Label runat="server" ID="Label3"
-                            Text='<%# Eval("LastName") %>' />
-                    </td>
-                    <td>
+                            Text='<%# Eval("FirstName") + " " + Eval("LastName") %>' />
+                    </div>
+                    <div class="col-md-3">
                         <asp:Label runat="server" ID="Label4"
                             Text='<%# Eval("ProductName") %>' />
-                    </td>
-                    <td>
+                    </div>
+                    <div class="col-md-2">
                         <asp:Label runat="server" ID="Label5"
                             Text='<%# Eval("ProductPrice") %>' />
-                    </td>
-                    <td>
+                    </div>
+                    <div class="col-md-3">
                         <asp:Label runat="server" ID="Label6"
-                            Text='<%# Eval("OrderFulfilled") %>' />
-                    </td>
+                            Text='<%#"<strong>Shipped: </strong>" + Eval("OrderFulfilled") %>' />
+                    </div>
+                    <br />
+                    
                 </tr>
             </ItemTemplate>
             <FooterTemplate>
