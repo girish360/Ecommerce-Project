@@ -33,7 +33,7 @@
                                     Text='<%# Eval("ProductPrice") %> ' />
                             </strong>
                             <%--<asp:Button runat="server" class="btn btn-primary" role="button" Text="Add to Cart" ID='<%# Eval("ProductId") %>'></asp:Button>--%>
-                            <a href="AddToCart.aspx?ProductID=<%# Eval("ProductId") %>" class="btn btn-primary" role="button" id='<%# Eval("ProductId") %>'>Add to Cart</a>
+                            <a href="AddToCart.aspx?ProductID=<%# Eval("ProductId") %>" class="btn btn-primary" role="button" id='<%# Eval("ProductId") %>'>Buy Now</a>
                         </div>
                     </div>
                 </div>
