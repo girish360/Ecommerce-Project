@@ -36,15 +36,16 @@ namespace Ecommerce_Project.Account
                 using (conn)
                 {
                     conn.Open();
-                    string sql = "INSERT INTO UserInformation(Id, FirstName,LastName,PhoneNumber,UserAddress,UserState,UserZipCode) VALUES(@param1,@param2,@param3,@param4,@param5,@param6, @param7)";
+                    string sql = "INSERT INTO UserInformation(Id, FirstName,LastName,PhoneNumber,UserAddress,UserCity,UserState,UserZipCode) VALUES(@param1,@param2,@param3,@param4,@param5,@param6, @param7, @param8)";
                     SqlCommand command = new SqlCommand(sql, conn);
                     command.Parameters.Add("@param1", SqlDbType.NVarChar, 128).Value = user.Id;
                     command.Parameters.Add("@param2", SqlDbType.VarChar, 50).Value = FirstName.Text;
                     command.Parameters.Add("@param3", SqlDbType.VarChar, 50).Value = LastName.Text;
                     command.Parameters.Add("@param4", SqlDbType.VarChar, 15).Value = PhoneNumber.Text;
                     command.Parameters.Add("@param5", SqlDbType.VarChar, 100).Value = Address.Text;
-                    command.Parameters.Add("@param6", SqlDbType.VarChar, 50).Value = State.Text;
-                    command.Parameters.Add("@param7", SqlDbType.VarChar, 5).Value = ZipCode.Text;
+                    command.Parameters.Add("@param6", SqlDbType.VarChar, 50).Value = City.Text;
+                    command.Parameters.Add("@param7", SqlDbType.VarChar, 50).Value = State.Text;
+                    command.Parameters.Add("@param8", SqlDbType.VarChar, 5).Value = ZipCode.Text;
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
                 }
