@@ -25,7 +25,7 @@
         <div class="col-md-12">
             <p><%#Eval("ProductDesc") %></p>
             <p>
-                <a class="btn btn-default" href="">Buy Now &raquo;</a>
+                <a class="btn btn-default" href="AddToCart.aspx?ProductID=<%# Eval("ProductId") %>">Buy Now &raquo;</a>
             </p>
         </div>
 
@@ -40,7 +40,7 @@
     <asp:SqlDataSource
         ConnectionString="<%$ ConnectionStrings:DefaultConnection %>"
         ID="SqlDataSource1" runat="server"
-        SelectCommand="SELECT [Products].[ProductName], [Products].[ProductType], [Products].[ProductPrice], [Products].[ProductImage], [Products].[ProductPrice], [Products].[ProductDesc]
+        SelectCommand="SELECT [Products].[ProductID], [Products].[ProductName], [Products].[ProductType], [Products].[ProductPrice], [Products].[ProductImage], [Products].[ProductPrice], [Products].[ProductDesc]
 FROM [Products]
 WHERE [Products].[ProductID] = @productID">
         <SelectParameters>
