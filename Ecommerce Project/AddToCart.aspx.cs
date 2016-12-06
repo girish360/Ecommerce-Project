@@ -44,6 +44,8 @@ namespace Ecommerce_Project
                     command.CommandType = CommandType.Text;
                     //More info on ExecuteNonQuery found @ https://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqlcommand.executenonquery(v=vs.110).aspx
                     command.ExecuteNonQuery();
+
+                    conn.Close();
                 }
                 Response.Redirect("UserOrders");
             }

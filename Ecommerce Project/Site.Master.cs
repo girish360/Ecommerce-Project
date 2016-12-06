@@ -76,6 +76,18 @@ namespace Ecommerce_Project
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
+
+        protected void userOrders(object sender, EventArgs e)
+        {
+            if (Page.User.Identity.GetUserId() == "eb7cb2f2-8814-42c5-bf45-afcdd23a01bf")
+            {
+                Response.Redirect("~/AdminOrders");
+            }
+            else
+            {
+                Response.Redirect("~/UserOrders");
+            }
+        }
     }
 
 }

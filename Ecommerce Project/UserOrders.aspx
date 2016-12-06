@@ -12,28 +12,42 @@
             <ItemTemplate>
                 <tr>
                     <hr />
-                    <div class="col-md-2">
+                    <div class="col-md-1">
                         <asp:Label runat="server" ID="Label1"
                             Text='<%#"Order #" + Eval("OrderID") %>' />
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-1">
                         <asp:Label runat="server" ID="Label2"
                             Text='<%# Eval("FirstName") + " " + Eval("LastName") %>' />
                     </div>
                     <div class="col-md-3">
-                        <asp:Label runat="server" ID="Label4"
+                        <asp:Label runat="server" ID="Label3"
                             Text='<%# Eval("ProductName") %>' />
                     </div>
-                    <div class="col-md-2">
-                        <asp:Label runat="server" ID="Label5"
+                    <div class="col-md-1">
+                        <asp:Label runat="server" ID="Label4"
                             Text='<%# Eval("ProductPrice") %>' />
                     </div>
                     <div class="col-md-3">
-                        <asp:Label runat="server" ID="Label6"
+                        <asp:Label runat="server" ID="Label5"
                             Text='<%#"<strong>Shipped: </strong>" + Eval("OrderFulfilled") %>' />
+                        <br />
+                        <asp:CheckBox ID="checkbox1" runat="server"
+                            AutoPostBack="True"
+                            Text="Update Shipping Status"
+                            TextAlign="Right" />
+                    </div>
+                    <div class="col-md-3">
+                        <asp:Label runat="server" ID="Label6"
+                            Text='<%#"<strong>Paid: </strong>" + Eval("OrderPaidFor") %>' />
+                        <br />
+                        <asp:CheckBox ID="checkbox2" runat="server"
+                            AutoPostBack="True"
+                            Text="Update Payment Status"
+                            TextAlign="Right" />
                     </div>
                     <br />
-                    
+                    <br />
                 </tr>
             </ItemTemplate>
             <FooterTemplate>
@@ -42,10 +56,7 @@
         </asp:Repeater>
         <asp:SqlDataSource
             ConnectionString="<%$ ConnectionStrings:DefaultConnection %>"
-            ID="SqlDataSource1" runat="server"
-            SelectCommand="SELECT [Orders].[OrderId], [UserInformation].[FirstName], [UserInformation].[LastName], [Products].[ProductName], [Products].[ProductPrice], [Orders].[OrderFulfilled]
-FROM [Orders], [Products], [UserInformation]
-WHERE [Orders].[ProductId] = [Products].[ProductID] AND [Orders].[UserId] = @userID AND [UserInformation].[Id] = @userID">
+            ID="SqlDataSource1" runat="server">
             <SelectParameters>
                 <asp:Parameter Name="userID" Type="String" />
             </SelectParameters>
