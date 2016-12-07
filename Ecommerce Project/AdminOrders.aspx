@@ -26,7 +26,7 @@
                     </div>
                     <div class="col-md-1">
                         <asp:Label runat="server" ID="Label4"
-                            Text='<%# Eval("ProductPrice") %>' />
+                            Text='<%#"$" + Eval("ProductPrice") %>' />
                     </div>
                     <div class="col-md-3">
                         <asp:Label runat="server" ID="Label5"
