@@ -6,47 +6,50 @@
             DataSourceID="SqlDataSource1">
             <HeaderTemplate>
                 <table class="table">
-                    <tr>
-                        <th>Order ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Product Name</th>
-                        <th>Price</th>
-                        <th>Order Fulfilled</th>
-                    </tr>
+                    <h3>All Orders</h3>
             </HeaderTemplate>
 
             <ItemTemplate>
                 <tr>
-                    <td>
+                    <hr />
+                    <div class="col-md-1">
                         <asp:Label runat="server" ID="Label1"
-                            Text='<%# Eval("OrderID") %>' />
-                    </td>
-                    <td>
+                            Text='<%#"Order #" + Eval("OrderID") %>' />
+                    </div>
+                    <div class="col-md-1">
                         <asp:Label runat="server" ID="Label2"
-                            Text='<%# Eval("FirstName") %>' />
-                    </td>
-                    <td>
+                            Text='<%# Eval("FirstName") + " " + Eval("LastName") %>' />
+                    </div>
+                    <div class="col-md-3">
                         <asp:Label runat="server" ID="Label3"
-                            Text='<%# Eval("LastName") %>' />
-                    </td>
-                    <td>
-                        <asp:Label runat="server" ID="Label7"
-                            Text='<%# Eval("Email") %>' />
-                    </td>
-                    <td>
-                        <asp:Label runat="server" ID="Label4"
                             Text='<%# Eval("ProductName") %>' />
-                    </td>
-                    <td>
-                        <asp:Label runat="server" ID="Label5"
+                    </div>
+                    <div class="col-md-1">
+                        <asp:Label runat="server" ID="Label4"
                             Text='<%# Eval("ProductPrice") %>' />
-                    </td>
-                    <td>
+                    </div>
+                    <div class="col-md-3">
+                        <asp:Label runat="server" ID="Label5"
+                            Text='<%#"<strong>Shipped: </strong>" + Eval("OrderFulfilled") %>' />
+                        <br />
+                        <asp:Button ID="button1" runat="server"
+                            AutoPostBack="True"
+                            Text="Update Shipping Status"
+                            TextAlign="Right"
+                            CommandArgument='<%# Eval("OrderID")+","+ Eval("OrderFulFilled")%>' OnCommand="orderFulfilledUpdate" />
+                    </div>
+                    <div class="col-md-3">
                         <asp:Label runat="server" ID="Label6"
-                            Text='<%# Eval("OrderFulfilled") %>' />
-                    </td>
+                            Text='<%#"<strong>Paid: </strong>" + Eval("OrderPaidFor") %>' />
+                        <br />
+                        <asp:Button ID="button2" runat="server"
+                            AutoPostBack="True"
+                            Text="Update Payment Status"
+                            TextAlign="Right"
+                            CommandArgument='<%# Eval("OrderID")+","+ Eval("OrderPaidFor") %>' OnCommand="paymentUpdate" />
+                    </div>
+                    <br />
+                    <br />
                 </tr>
             </ItemTemplate>
             <FooterTemplate>
@@ -55,10 +58,7 @@
         </asp:Repeater>
         <asp:SqlDataSource
             ConnectionString="<%$ ConnectionStrings:DefaultConnection %>"
-            ID="SqlDataSource1" runat="server"
-            SelectCommand="SELECT [Orders].[OrderId], [UserInformation].[FirstName], [UserInformation].[LastName], [Products].[ProductName], [Products].[ProductPrice], [Orders].[OrderFulfilled], [AspNetUsers].[Email]
-FROM [Orders], [Products], [UserInformation], [AspNetUsers]
-WHERE [Orders].[ProductId] = [Products].[ProductID] AND [Orders].[UserId] = [AspNetUsers].[Id] AND [Orders].[UserId] = [UserInformation].[Id]">
+            ID="SqlDataSource1" runat="server">
             <SelectParameters>
                 <asp:Parameter Name="userID" Type="String" />
             </SelectParameters>

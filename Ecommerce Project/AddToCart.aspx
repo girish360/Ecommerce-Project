@@ -2,6 +2,4 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<%--    <div><%= Page.User.Identity.Name %></div>
-    <div><%= Page.User.Identity.GetUserId() %></div>--%>
 </asp:Content>
