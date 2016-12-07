@@ -71,9 +71,9 @@
                             <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a href="Handguns">Handguns</a></li>
-                                <li><a href="Rifles">Rifles</a></li>
-                                <li><a href="Shotguns">Shotguns</a></li>
+                                <li><a href="/Handguns">Handguns</a></li>
+                                <li><a href="/Rifles">Rifles</a></li>
+                                <li><a href="/Shotguns">Shotguns</a></li>
                             </ul>
                         </li>
                     </ul>
