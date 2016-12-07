@@ -32,19 +32,11 @@
                         <asp:Label runat="server" ID="Label5"
                             Text='<%#"<strong>Shipped: </strong>" + Eval("OrderFulfilled") %>' />
                         <br />
-                        <asp:CheckBox ID="checkbox1" runat="server"
-                            AutoPostBack="True"
-                            Text="Update Shipping Status"
-                            TextAlign="Right" />
                     </div>
                     <div class="col-md-3">
                         <asp:Label runat="server" ID="Label6"
                             Text='<%#"<strong>Paid: </strong>" + Eval("OrderPaidFor") %>' />
                         <br />
-                        <asp:CheckBox ID="checkbox2" runat="server"
-                            AutoPostBack="True"
-                            Text="Update Payment Status"
-                            TextAlign="Right" />
                     </div>
                     <br />
                     <br />
