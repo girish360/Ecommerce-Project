@@ -10,7 +10,6 @@
             </HeaderTemplate>
 
             <ItemTemplate>
-                <tr>
                     <hr />
                     <div class="col-md-1">
                         <asp:Label runat="server" ID="Label1"
@@ -40,10 +39,10 @@
                     </div>
                     <br />
                     <br />
-                </tr>
             </ItemTemplate>
+
             <FooterTemplate>
-                </table>
+
             </FooterTemplate>
         </asp:Repeater>
         <asp:SqlDataSource
