@@ -33,6 +33,9 @@
                                 <asp:Label runat="server" ID="Label4" class="padd1 h3"
                                     Text='<%# Eval("ProductPrice") %> ' />
                             </strong>
+                            <%-- This link is incredibly important!
+                                 When the user clicks on the button "Buy Now", it redirects to AddToCart.aspx with the 
+                                 id of the product, and then the codebehind will add it to the orders table. --%>
                             <a href="AddToCart.aspx?ProductID=<%# Eval("ProductId") %>" class="btn btn-primary" role="button" id='<%# Eval("ProductId") %>'>Add to Cart</a>
                         </div>
                     </div>
