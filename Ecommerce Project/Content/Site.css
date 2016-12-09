@@ -1,4 +1,4 @@
-﻿/* Move down content because we have a fixed navbar that is 50px tall */
+﻿/* Move down content because we have a fixed navbar that is tall */
 body {
     padding-top: 100px;
     padding-bottom: 20px;
@@ -63,6 +63,8 @@ input[type="select"] {
     }
 }
 
+/* product thumbnail */
+
 .thumbnail {
     border: 0 none;
     box-shadow: none;
@@ -86,11 +88,12 @@ footer {
     margin: 50px 0;
 }
 
+/* Product padding */
 .padd1 {
     padding-right: 5px;
 }
 
-/*new css*/
+/* Added padding to content and spaced out navbar text for aesthetics */
 
 .navbar {
     padding-top: 17px;
@@ -102,13 +105,17 @@ footer {
     letter-spacing: 2px;
 }
 
+/* Change navbar font and font weight*/
 .nav {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 
 
-/* Navbar styling */
+/* Navbar styling including colors and functionality
+   Consulted bootstrap docs and stackoverflow, including
+   http://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3
+*/
 
 .navbar-default {
   background-color: #525252;
@@ -179,3 +186,5 @@ footer {
     background-color: #ffffff;
   }
 }
+
+/* end navbar styling */
