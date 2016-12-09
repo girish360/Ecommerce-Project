@@ -93,3 +93,15 @@ footer {
 .padd1 {
     padding-right: 5px;
 }
+
+/*new css*/
+
+.navbar {
+    padding-top: 17px;
+    padding-bottom: 6px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+}

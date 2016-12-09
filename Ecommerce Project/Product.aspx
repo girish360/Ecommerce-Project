@@ -4,6 +4,7 @@
     <asp:FormView ID="Form1" runat="server"
         DataSourceID="SqlDataSource1">
         <ItemTemplate>
+            <%-- Using bootstrap to make the product pages mobile friendly with the only notable part with the product name taking up 10 unites, and the price taking up 2 --%>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
