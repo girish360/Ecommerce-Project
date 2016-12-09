@@ -50,8 +50,9 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -59,7 +60,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <img  runat="server" href="~/" src="//cdn1.lawrensen.com/pbsj/img/pbsjlogo.png" alt="Company Logo" id="logo" />
+                    <img runat="server" href="~/" src="//cdn1.lawrensen.com/pbsj/img/pbsjlogorev.png" alt="Company Logo" id="logo" />
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -89,7 +90,7 @@
                                 <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
                                 <li>
                                     <%-- Use ASP LinkButton to redirect users to UserOrders and Administrator to AdminOrders --%>
-                                    <asp:LinkButton id="myLink" Text="Orders" OnClick="userOrders" runat="server"/>
+                                    <asp:LinkButton ID="myLink" Text="Orders" OnClick="userOrders" runat="server" />
                                 </li>
                                 <li>
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
