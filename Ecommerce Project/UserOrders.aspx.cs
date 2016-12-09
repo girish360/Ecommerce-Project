@@ -1,13 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Ecommerce_Project
 {
@@ -26,9 +18,10 @@ namespace Ecommerce_Project
             else
             {
                 //Query to display user orders
-                SqlDataSource1.SelectCommand = "SELECT[Orders].[OrderId], [UserInformation].[FirstName], [UserInformation].[LastName], [Products].[ProductName], [Products].[ProductPrice], [Orders].[OrderFulfilled], [Orders].[OrderPaidFor] FROM[Orders], [Products], [UserInformation] WHERE[Orders].[ProductId] = [Products].[ProductID] AND [Orders].[UserId] = @userID AND [UserInformation].[Id] = @userID";
+                SqlDataSource1.SelectCommand = "SELECT[Orders].[OrderId], [UserInformation].[FirstName], [UserInformation].[LastName], [Products].[ProductName]," +
+                     "[Products].[ProductPrice], [Orders].[OrderFulfilled], [Orders].[OrderPaidFor] FROM[Orders], [Products], [UserInformation]" +
+                     "WHERE[Orders].[ProductId] = [Products].[ProductID] AND [Orders].[UserId] = @userID AND [UserInformation].[Id] = @userID";
                 SqlDataSource1.DataBind();
-
             }
         }
     }

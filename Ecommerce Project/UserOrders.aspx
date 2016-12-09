@@ -9,7 +9,6 @@
                 <table class="table">
                     <h3>Your Orders</h3>
             </HeaderTemplate>
-
             <ItemTemplate>
                     <hr />
                     <div class="col-md-1">
@@ -41,11 +40,11 @@
                     <br />
                     <br />
             </ItemTemplate>
-
             <FooterTemplate>
-
             </FooterTemplate>
         </asp:Repeater>
+        <%-- Define the data source for the repeater
+             Query is defined in code behind. --%>
         <asp:SqlDataSource
             ConnectionString="<%$ ConnectionStrings:DefaultConnection %>"
             ID="SqlDataSource1" runat="server">

@@ -5,7 +5,17 @@
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
-
+    <%-- Creates a form that includes the following fields:
+         First and Last Name
+         Email
+         Phone Number
+         Address
+         City
+         State
+         Zip
+         Password and Confirm Password
+         
+         This will create an entry in the table "AspNetUsers" --%>
     <div class="form-horizontal">
         <h4>Create a new account</h4>
         <hr />

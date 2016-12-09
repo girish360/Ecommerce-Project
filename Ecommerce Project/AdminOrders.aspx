@@ -57,6 +57,8 @@
                 </table>
             </FooterTemplate>
         </asp:Repeater>
+        <%-- Define the data source for the repeater. 
+             Query is in code behind.--%>
         <asp:SqlDataSource
             ConnectionString="<%$ ConnectionStrings:DefaultConnection %>"
             ID="SqlDataSource1" runat="server">
