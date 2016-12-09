@@ -10,8 +10,10 @@ namespace Ecommerce_Project.Account
 {
     public partial class Login : Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            moreInfo.Visible = false;
             RegisterHyperLink.NavigateUrl = "Register";
             // Enable this once you have account confirmation enabled for password reset functionality
             //ForgotPasswordHyperLink.NavigateUrl = "Forgot";
