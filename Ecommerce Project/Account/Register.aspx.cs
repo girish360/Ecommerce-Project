@@ -17,27 +17,28 @@ namespace Ecommerce_Project.Account
 {
     public partial class Register : Page
     {
-        //SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\ProjectsV13;AttachDbFilename=""C: \Users\Braden\Source\Repos\Ecommerce - Project\Ecommerce Project\App_Data\aspnet - Ecommerce Project - 20161119011615.mdf"";Initial Catalog=""aspnet - Ecommerce Project - 20161119011615"";Integrated Security=True");
+        //Define sql connection 
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
 
+        //This method is called when a user registers.
         protected void CreateUser_Click(object sender, EventArgs e)
         {
+            //Default code...
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
             var user = new ApplicationUser() { UserName = Email.Text, Email = Email.Text };
             IdentityResult result = manager.Create(user, Password.Text);
             if (result.Succeeded)
             {
-                // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                //string code = manager.GenerateEmailConfirmationToken(user.Id);
-                //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
-                //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
-
                 using (conn)
                 {
+                    //Open sql connection
                     conn.Open();
+                    //Define the sql command to create the user
                     string sql = "INSERT INTO UserInformation(Id, FirstName,LastName,PhoneNumber,UserAddress,UserCity,UserState,UserZipCode) VALUES(@param1,@param2,@param3,@param4,@param5,@param6, @param7, @param8)";
+                    //Assign the sql query to a command
                     SqlCommand command = new SqlCommand(sql, conn);
+                    //Add all parameters from the form
                     command.Parameters.Add("@param1", SqlDbType.NVarChar, 128).Value = user.Id;
                     command.Parameters.Add("@param2", SqlDbType.VarChar, 50).Value = FirstName.Text;
                     command.Parameters.Add("@param3", SqlDbType.VarChar, 50).Value = LastName.Text;
@@ -47,9 +48,10 @@ namespace Ecommerce_Project.Account
                     command.Parameters.Add("@param7", SqlDbType.VarChar, 50).Value = State.Text;
                     command.Parameters.Add("@param8", SqlDbType.VarChar, 5).Value = ZipCode.Text;
                     command.CommandType = CommandType.Text;
+                    //Executes the sql command
                     command.ExecuteNonQuery();
                 }
-
+                //More default code...
                 signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
                 IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
             }

@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="Ecommerce_Project.Product" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <%-- Create the FormView to display a specific products information --%>
     <asp:FormView ID="Form1" runat="server"
         DataSourceID="SqlDataSource1">
         <ItemTemplate>
-            <%-- Using bootstrap to make the product pages mobile friendly with the only notable part with the product name taking up 10 unites, and the price taking up 2 --%>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -23,21 +23,20 @@
                 </div>
 
                 <div class="row">
-        <div class="col-md-12">
-            <p><%#Eval("ProductDesc") %></p>
-            <p>
-                <a class="btn btn-default" href="AddToCart.aspx?ProductID=<%# Eval("ProductId") %>">Buy Now &raquo;</a>
-            </p>
-        </div>
+                    <div class="col-md-12">
+                        <p><%#Eval("ProductDesc") %></p>
+                        <p>
+                            <a class="btn btn-default" href="AddToCart.aspx?ProductID=<%# Eval("ProductId") %>">Buy Now &raquo;</a>
+                        </p>
+                    </div>
 
-    </div>
-
-
+                </div>
         </ItemTemplate>
         <EmptyDataTemplate>
             <p>You must select a product.</p>
         </EmptyDataTemplate>
     </asp:FormView>
+    <%-- Define the SQL data source and query to populate the form --%>
     <asp:SqlDataSource
         ConnectionString="<%$ ConnectionStrings:DefaultConnection %>"
         ID="SqlDataSource1" runat="server"

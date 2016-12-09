@@ -16,7 +16,7 @@ namespace Ecommerce_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //userId = Page.User.Identity.GetUserId();
+            //This returns which product to populate the Product page with
             SqlDataSource1.SelectParameters["ProductID"].DefaultValue = Request.QueryString["ProductID"];
         }
 

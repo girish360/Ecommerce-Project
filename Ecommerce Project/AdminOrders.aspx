@@ -2,6 +2,7 @@
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
+        <%-- Define the data repeater to display all orders for the admin to see and update --%>
         <asp:Repeater ID="Repeater1" runat="server"
             DataSourceID="SqlDataSource1">
             <HeaderTemplate>
@@ -56,6 +57,8 @@
                 </table>
             </FooterTemplate>
         </asp:Repeater>
+        <%-- Define the data source for the repeater. 
+             Query is in code behind.--%>
         <asp:SqlDataSource
             ConnectionString="<%$ ConnectionStrings:DefaultConnection %>"
             ID="SqlDataSource1" runat="server">
