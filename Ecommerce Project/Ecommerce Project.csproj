@@ -205,17 +205,9 @@
     <Content Include="App_Data\aspnet-Ecommerce Project-20161119011615_log.ldf">
       <DependentUpon>aspnet-Ecommerce Project-20161119011615.mdf</DependentUpon>
     </Content>
-    <Content Include="App_Data\Orders.mdf" />
-    <Content Include="App_Data\Orders_log.ldf">
-      <DependentUpon>Orders.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\Users.mdf" />
-    <Content Include="App_Data\UsersOLD.mdf" />
-    <Content Include="App_Data\UsersOLD_log.ldf">
-      <DependentUpon>UsersOLD.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\Users_log.ldf">
-      <DependentUpon>Users.mdf</DependentUpon>
+    <Content Include="App_Data\Ecommerce_Project.mdf" />
+    <Content Include="App_Data\Ecommerce_Project_log.ldf">
+      <DependentUpon>Ecommerce_Project.mdf</DependentUpon>
     </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -226,6 +218,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <None Include="Properties\PublishProfiles\IIS Ecommerce.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Handguns.aspx" />
     <Content Include="Product.aspx" />
