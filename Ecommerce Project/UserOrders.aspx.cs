@@ -15,6 +15,7 @@ namespace Ecommerce_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //set userID parameter to be the current logged in user
             SqlDataSource1.SelectParameters["userID"].DefaultValue = User.Identity.GetUserId();
 
             if (User.Identity.GetUserId() == "eb7cb2f2-8814-42c5-bf45-afcdd23a01bf")

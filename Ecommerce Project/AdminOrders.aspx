@@ -2,6 +2,7 @@
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
+        <%-- Define the data repeater to display all orders for the admin to see and update --%>
         <asp:Repeater ID="Repeater1" runat="server"
             DataSourceID="SqlDataSource1">
             <HeaderTemplate>

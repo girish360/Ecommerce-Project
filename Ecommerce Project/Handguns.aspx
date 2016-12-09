@@ -7,12 +7,12 @@
         </Scripts>
     </asp:ScriptManagerProxy>
     <div>
+        <%-- Define repeater to display all handguns --%>
         <asp:Repeater ID="Repeater1" runat="server"
             DataSourceID="SqlDataSource1">
             <HeaderTemplate>
                 <h3>Handguns</h3>
             </HeaderTemplate>
-
             <ItemTemplate>
                 <div class="col-md-3 prod" style="padding-left: 0px; padding-right: 0px;">
                     <div class="thumbnail">
@@ -32,7 +32,6 @@
                                 <asp:Label runat="server" ID="Label4" class="padd1 h3"
                                     Text='<%# Eval("ProductPrice") %> ' />
                             </strong>
-                            <%--<asp:Button runat="server" class="btn btn-primary" role="button" Text="Add to Cart" ID='<%# Eval("ProductId") %>'></asp:Button>--%>
                             <a href="AddToCart.aspx?ProductID=<%# Eval("ProductId") %>" class="btn btn-primary" role="button" id='<%# Eval("ProductId") %>'>Buy Now</a>
                         </div>
                     </div>
@@ -42,7 +41,7 @@
                 </table>
             </FooterTemplate>
         </asp:Repeater>
-
+        <%-- Define sql data source and the query --%>
         <asp:SqlDataSource
             ConnectionString="<%$ ConnectionStrings:DefaultConnection %>"
             ID="SqlDataSource1" runat="server"

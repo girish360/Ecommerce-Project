@@ -1,7 +1,8 @@
-﻿<%@ Page Title="About Our Team" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="Ecommerce_Project.About" %>
+﻿<%@ Page Title="About Our Team:" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="Ecommerce_Project.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
+    <h4>Mission Statement:</h4>
     <p>
         At PBSJ Armory our goal is to preserve the American legacy of firearm ownership by providing opportunities to own quality firearms while providing our customers
         with world renowned service.
